@@ -1,0 +1,29 @@
+package multipleEx1;
+interface Asiangames {
+	   public void start();
+	}
+	interface Sports {
+	   public void play();
+	}
+	interface Hockey extends Sports, Asiangames{
+	   public void show();
+	}
+	public class Games{
+	   public static void main(String[] args){
+	      Hockey hockey = new Hockey() {
+	         public void start() {
+	            System.out.println("Start Event");
+	         }
+	         public void play() {
+	            System.out.println("Play Sports.");
+	         }
+	         public void show() {
+	            System.out.println("Show Hockey.");
+	         }
+	      };
+
+	      hockey.start();
+	      hockey.play();
+	      hockey.show();
+	   }
+	}
